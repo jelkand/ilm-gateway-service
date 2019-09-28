@@ -1,5 +1,5 @@
 {
-  "name": "typescript-service-template",
+  "name": "ilm-gateway-service",
   "version": "0.1.0",
   "description": "An opinionated template for spinning up typescript services.",
   "scripts": {
@@ -12,19 +12,19 @@
     "lint:fix": "eslint --fix .",
     "migrate": "sequelize db:migrate",
     "start:ci": "node dist/server/server.js",
-    "start:dev": "concurrently \"npm run build:watch\" \"nodemon dist/server/server.js\"",
+    "start:dev": "concurrently \"npm run build:watch\" \"nodemon dist/server.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jelkand/typescript-service-template.git"
+    "url": "git+https://github.com/jelkand/ilm-gateway-service.git"
   },
   "author": "Jack Anderson",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jelkand/typescript-service-template/issues"
+    "url": "https://github.com/jelkand/ilm-gateway-service/issues"
   },
-  "homepage": "https://github.com/jelkand/typescript-service-template#readme",
+  "homepage": "https://github.com/jelkand/ilm-gateway-service#readme",
   "devDependencies": {
     "@graphql-codegen/cli": "^1.6.1",
     "@graphql-codegen/typescript": "^1.6.1",
@@ -45,6 +45,7 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "@apollo/gateway": "^0.10.4",
     "@types/bluebird": "^3.5.27",
     "@types/express": "^4.17.0",
     "@types/node": "^12.7.1",
@@ -54,7 +55,7 @@
     "express": "^4.17.1",
     "graphql": "^14.4.2",
     "pg": "^7.12.1",
-    "sequelize": "^5.14.0",
+    "sequelize": "^5.19.0",
     "sequelize-cli": "^5.5.0",
     "sequelize-typescript": "^1.0.0",
     "uuid": "^3.3.3"
